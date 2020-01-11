@@ -1,10 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import GuestContext from '../../context/guestContext/GuestContext'
+
 
 function GuestFilter() {
+  //toggleFilter action
+  const {toggleFilter} = useContext(GuestContext)
+
+
     return (
         <div className="toggle">
         <label className="switch">
-          <input type="checkbox" />
+          <input type="checkbox" onChange={()=> toggleFilter()} />
           <span className="slider round"></span>
         </label>
         <p className="lead">Show attending only!</p>

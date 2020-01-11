@@ -5,12 +5,16 @@ import Guest from './Guest'
 import GuestContext from '../../context/guestContext/GuestContext'
 
 function Guests() {
-    const {guests} = useContext(GuestContext)
+    const {guests, filterGuest, search} = useContext(GuestContext)
+
     return (
         <div className="guests">
-            {guests.map(item=> <Guest key={item.id}  guest={item}/> )}
+            { search !== null ? search.map(item =><Guest key={item.id}  guest={item}/> ) :
+            guests.filter(item=> !filterGuest || item.isconfirmed).map(item=> <Guest key={item.id}  guest={item}/> )
+            }
         </div>
     )
 }
 
 export default Guests
+  
