@@ -31,9 +31,9 @@ const GuestCounter = () => {
               <td>{invitedByDiet('Vegan')}</td>
             <td>{attendingByDiet('Vegan')}</td>
           </tr><tr>
-            <th>Pescatarians</th>
-            <td>{invitedByDiet('Pescatarian')}</td>
-            <td>{attendingByDiet('Pescatarian')}</td>
+            <th>Pescatarian</th>
+            <td>{invitedByDiet('pescatarian')}</td>
+            <td>{attendingByDiet('pescatarian')}</td>
           </tr>
           <tr>
             <th>Total</th>
